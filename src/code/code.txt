@@ -1,0 +1,47 @@
+
+code.bin:     file format binary
+
+
+Disassembly of section .data:
+
+0000000000000000 <.data>:
+   0:	00007293          	and	t0,zero,0
+   4:	00007313          	and	t1,zero,0
+   8:	88888137          	lui	sp,0x88888
+   c:	00832183          	lw	gp,8(t1)
+  10:	0032a223          	sw	gp,4(t0)
+  14:	00402083          	lw	ra,4(zero) # 0x4
+  18:	01c02383          	lw	t2,28(zero) # 0x1c
+  1c:	00338863          	beq	t2,gp,0x2c
+  20:	555550b7          	lui	ra,0x55555
+  24:	0070a0b3          	slt	ra,ra,t2
+  28:	fe0098e3          	bnez	ra,0x18
+  2c:	007282b3          	add	t0,t0,t2
+  30:	00230333          	add	t1,t1,sp
+  34:	00531463          	bne	t1,t0,0x3c
+  38:	40000033          	neg	zero,zero
+  3c:	40530433          	sub	s0,t1,t0
+  40:	405304b3          	sub	s1,t1,t0
+  44:	0080006f          	j	0x4c
+  48:	00007033          	and	zero,zero,zero
+  4c:	0072f533          	and	a0,t0,t2
+  50:	00157593          	and	a1,a0,1
+  54:	00b51463          	bne	a0,a1,0x5c
+  58:	00006033          	or	zero,zero,zero
+  5c:	00a5e5b3          	or	a1,a1,a0
+  60:	0015e513          	or	a0,a1,1
+  64:	00558463          	beq	a1,t0,0x6c
+  68:	00004033          	xor	zero,zero,zero
+  6c:	00a5c633          	xor	a2,a1,a0
+  70:	00164613          	xor	a2,a2,1
+  74:	00b61463          	bne	a2,a1,0x7c
+  78:	00000013          	nop
+  7c:	0012d293          	srl	t0,t0,0x1
+  80:	00060463          	beqz	a2,0x88
+  84:	40000033          	neg	zero,zero
+  88:	00129293          	sll	t0,t0,0x1
+  8c:	00b28463          	beq	t0,a1,0x94
+  90:	00000013          	nop
+  94:	001026b3          	sgtz	a3,ra
+  98:	00503733          	snez	a4,t0
+  9c:	f65ff06f          	j	0x0
